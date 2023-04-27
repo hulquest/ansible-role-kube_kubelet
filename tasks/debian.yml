@@ -43,6 +43,13 @@
   changed_when: false
   failed_when: false
 
+# Prior to Ubuntu 22.04, this directory does not exist.
+- name: create-keyring-directory
+  ansible.builtin.file:
+    path: "/etc/apt/keyrings"
+    state: "directory"
+    mode: "0755"
+
 - name: apt-get install
   ansible.builtin.apt:
     name: "{{ item.name }}"
