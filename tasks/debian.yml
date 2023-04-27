@@ -15,12 +15,6 @@
 # limitations under the License.
 
 # Prior to Ubuntu 22.04, this directory does not exist.
-- name: create-keyring-directory
-  ansible.builtin.file:
-    path: "/etc/apt/keyrings"
-    state: "directory"
-    mode: "0755"
-
 - name: apt-key add
   ansible.builtin.apt_key:
     keyring: "{{ item.keyring }}"
