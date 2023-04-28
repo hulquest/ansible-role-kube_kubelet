@@ -19,7 +19,7 @@ _kube_release: "1.26"
 _apt_key:
   - keyring: "/etc/apt/trusted.gpg.d/kubernetes-archive-keyring.gpg"
     url: "https://packages.cloud.google.com/apt/doc/apt-key.gpg"
-    id: "EB4C1BFD4F042F6DDDCCEC917721F63BD38B4796"
+    id: "A362B822F6DEDC652817EA46B53DC80D13ED EF05"
     state: "present"
 
 _apt_repository:
